@@ -1,0 +1,96 @@
+body{
+    background-color: rgb(60, 230, 249);
+}
+
+h3 {
+    position: relative;
+    top: -20px;
+    font-size: 1.5rem;
+}
+
+h5 {
+    position: relative;
+    top: -30px;
+    font-size: 1rem;
+}
+
+p {
+    position: relative;
+    top: -15px;
+    font-size: 0.7rem;
+}
+
+form{
+    border-top-style: groove;
+    padding-top: 20px;
+    border-color: rgba(58, 49, 49, 0.052);
+
+}
+
+.form {
+    font-size: 0.7rem;
+}
+
+
+.col-sm-7 {
+    background-color: rgb(255, 255, 255);
+}
+
+#button1 {
+    padding: 5px 37px 6px 37px;
+    margin-bottom: 10px;
+}
+
+.form-control-lg{
+    font-size: 1rem;
+}
+
+/* img {
+    width: 106%;
+    position: relative;
+    right: 12px;
+} */
+
+.vh-100 {
+    position: relative;
+    top: -16px;
+}
+
+
+div#slides img
+{
+    display : none;
+    position: relative;
+    right: 12px;
+    
+}
+
+div#slides img:first-child
+{
+    display : inline;
+}
+
+.pos1{
+    position: relative;
+    top: 10px;
+}
+
+.pos2{
+    position: relative;
+    top: -2px;
+}
+
+.pos3{
+    position: relative;
+    top: -3px;
+}
+
+.dec{
+    text-decoration: none; 
+}
+
+@media (max-width: 767px) {
+    #slides {
+      display: none;
+    }
+  }
