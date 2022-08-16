@@ -9,7 +9,7 @@ function Button_onclick() {
     var patt1 = /[^a-zA-Z" "]/
     var patt2 = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     var patt3 = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
-    var patt4 = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/
+    var patt4 = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@/#$%^&*]{6,16}$/;
 
 
     if ((((!patt1.test(firstName)) && (!patt1.test(lastName))) && ((patt2.test(emailAddress)) && (patt3.test(phoneNumber)))) && ((patt4.test(pass)) && (pass==pass2))) {
