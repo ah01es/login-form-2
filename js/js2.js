@@ -11,43 +11,6 @@ function Button_onclick() {
     var patt3 = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
     var patt4 = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/
 
-    // if (!patt1.test(firstName))
-    // alert("ok")
-    // else{
-    //     alert("mooooooz")
-    // }
-
-    // if (!patt.test(lastName))
-    // alert("ok")
-    // else{
-    //     alert("mooooooz las")
-    // }
-    
-    // if (patt2.test(emailAddress))
-    // alert("ok")
-    // else{
-    //     alert("mooooooz las")
-    // }
-
-    // if (patt3.test(phoneNumber))
-    // alert("ok")
-    // else{
-    //     alert("mooooooz las")
-    // }
-
-    // if (patt4.test(pass))
-    // alert("ok")
-    // else{
-    //     alert("mooooooz las")
-    // }
-
-    // if (pass==pass2)
-    //      alert("ok")
-    // else{
-    // document.getElementById('pass2').style.borderColor = "red";
-    // document.getElementById('pass2').style.borderWidth = "3px";
-    // }
-
 
     if ((((!patt1.test(firstName)) && (!patt1.test(lastName))) && ((patt2.test(emailAddress)) && (patt3.test(phoneNumber)))) && ((patt4.test(pass)) && (pass==pass2))) {
         window.open("./page2/pag2.html");

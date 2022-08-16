@@ -32,7 +32,7 @@ form{
 }
 
 
-.col-sm-7 {
+.col-md-7 {
     background-color: rgb(255, 255, 255);
 }
 
@@ -61,7 +61,8 @@ div#slides img
 {
     display : none;
     position: relative;
-    right: 12px;
+    right: 0.75rem;
+    overflow: hidden;
     
 }
 
@@ -89,8 +90,8 @@ div#slides img:first-child
     text-decoration: none; 
 }
 
-@media (max-width: 767px) {
-    #slides {
+@media (max-width: 768px) {
+    .col-md-4 {
       display: none;
     }
   }
