@@ -22,13 +22,13 @@ p {
 
 form{
     border-top-style: groove;
-    padding-top: 20px;
+    padding-top: 1rem;
     border-color: rgba(58, 49, 49, 0.052);
 
 }
 
 .form {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 
@@ -36,40 +36,15 @@ form{
     background-color: rgb(255, 255, 255);
 }
 
-#button1 {
+/* #button1 {
     padding: 5px 37px 6px 37px;
     margin-bottom: 10px;
-}
+} */
 
 .form-control-lg{
     font-size: 1rem;
 }
 
-/* img {
-    width: 106%;
-    position: relative;
-    right: 12px;
-} */
-
-.vh-100 {
-    position: relative;
-    top: -16px;
-}
-
-
-div#slides img
-{
-    display : none;
-    position: relative;
-    right: 0.75rem;
-    overflow: hidden;
-    
-}
-
-div#slides img:first-child
-{
-    display : inline;
-}
 
 .pos1{
     position: relative;
@@ -90,8 +65,92 @@ div#slides img:first-child
     text-decoration: none; 
 }
 
-@media (max-width: 768px) {
-    .col-md-4 {
+  @media (max-width: 768px) {
+    .image-container {
       display: none;
     }
   }
+
+  @media (max-width: 768px) {
+    .dot-container button:nth-child(1) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dot-container button:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dot-container button:nth-child(3) {
+      display: none;
+    }
+  }
+
+.container {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+img{
+    position: relative;
+    right: 0.74rem;
+    width: 26.7rem;
+    height: 42.3rem;
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.dot-container{
+    position: absolute;
+    bottom: 7.1rem;
+    left: 12.4rem;
+    width: 10rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button{
+    outline: none;
+    cursor: pointer;
+}
+
+.dot-container button{
+    height: 15px;
+    width: 50px;
+    border-radius: 10%;
+    border: 3px solid #00000093;
+    background-color: transparent;
+}
+
+.dot-container button:nth-child(1){
+    background-color: rgb(7, 107, 184)
+}
+
+/* #prev,#next{
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    bottom: 28rem;
+    background-color: #61a9e0cb;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    font-weight: bolder;
+}
+
+#prev{
+    left: 0.6rem;
+}
+
+#next{
+    left: 22.8rem;
+} */

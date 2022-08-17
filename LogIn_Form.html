@@ -20,17 +20,22 @@
 <body>
 
   
-  <section class="vh-100 gradient-custom">
+  <section class="vh-100">
     <div class="container py-5">
       <div class="row justify-content-center">
-      <div class="col-md-4">
-        <div id="slides">
-          <img src="./image/image1.jpg" />
-          <img src="./image/image2.jpg" />
-          <img src="./image/image3.jpg" />
+        <div class="col-md-4">
+            <div class="image-container">
+            <img src="./image/image1.jpg" id="content1" class="active">
+            <img src="./image/image2.jpg" id="content2">
+            <img src="./image/image3.jpg" id="content3">
+            </div>
+            <div class="dot-container">
+            <button onclick = "dot(1)"></button>
+            <button onclick = "dot(2)"></button>
+            <button onclick = "dot(3)"></button>
+            </div>
         </div>
-        <!-- <img src="./image/image.png" alt="image.png"> -->
-      </div>
+          <!-- <img src="./image/image.png" alt="image.png"> -->
       <div class="col-md-7">
         <div class="card-body p-4 p-md-5">
           <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Register</h3>
@@ -106,7 +111,7 @@
             </div>
 
             <div class="mt-4 pt-2">
-              <button class="btn btn-primary btn-lg" type="button" id="button" onclick="Button_onclick()"">Create Account</button><br />
+              <button class="btn btn-primary btn-lg" type="button" id="button" onclick="Button_onclick()">Create Account</button><br />
               <div class="pos1">Already have an account? <a class="dec" href="#">Log in</a></div>
             </div>
           </div>
@@ -116,11 +121,10 @@
     </div>
     </div>
   </section>
-
 </body>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap.bundle.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="js/js1.js"></script>
-<script src="js/js2.js"></script>
+<script src="js/form-control.js"></script>
+<script src="js/slider.js"></script>
 </html>

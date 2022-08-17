@@ -6,17 +6,17 @@ function Button_onclick() {
     var pass = document.getElementById("pass").value;
     var pass2 = document.getElementById("pass2").value;
 
-    var patt1 = /[^a-zA-Z" "]/
-    var patt2 = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    var patt3 = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
-    var patt4 = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@/#$%^&*]{6,16}$/;
+    var name_control = /[^a-zA-Z" "]/
+    var mail_control = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    var phon_control = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+    var pass_control = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@/#$%^&*]{6,16}$/;
 
 
-    if ((((!patt1.test(firstName)) && (!patt1.test(lastName))) && ((patt2.test(emailAddress)) && (patt3.test(phoneNumber)))) && ((patt4.test(pass)) && (pass==pass2))) {
+    if ((!name_control.test(firstName)) && (!name_control.test(lastName)) && (mail_control.test(emailAddress)) && (phon_control.test(phoneNumber)) && (pass_control.test(pass)) && (pass==pass2)) {
         window.open("./page2/pag2.html");
     }
 
-    if (patt1.test(firstName)){
+    if (name_control.test(firstName)){
         document.getElementById('firstName').style.borderColor = "red";
         document.getElementById('firstName').style.borderWidth = "3px";
     }
@@ -25,7 +25,7 @@ function Button_onclick() {
         document.getElementById('firstName').style.borderWidth = "1px";
     }
 
-    if (patt1.test(lastName)){
+    if (name_control.test(lastName)){
         document.getElementById('lastName').style.borderColor = "red";
         document.getElementById('lastName').style.borderWidth = "3px";
     }
@@ -34,7 +34,7 @@ function Button_onclick() {
         document.getElementById('lastName').style.borderWidth = "1px";
     }
 
-    if (!patt2.test(emailAddress)){
+    if (!mail_control.test(emailAddress)){
         document.getElementById('emailAddress').style.borderColor = "red";
         document.getElementById('emailAddress').style.borderWidth = "3px";
     }
@@ -43,7 +43,7 @@ function Button_onclick() {
         document.getElementById('emailAddress').style.borderWidth = "1px";
     }
 	
-    if (!patt3.test(phoneNumber)){
+    if (!phon_control.test(phoneNumber)){
         document.getElementById('phoneNumber').style.borderColor = "red";
         document.getElementById('phoneNumber').style.borderWidth = "3px";
     }
@@ -52,7 +52,7 @@ function Button_onclick() {
         document.getElementById('phoneNumber').style.borderWidth = "1px";
     }
 
-    if (!patt4.test(pass)){
+    if (!pass_control.test(pass)){
         document.getElementById('pass').style.borderColor = "red";
         document.getElementById('pass').style.borderWidth = "3px";
     }
